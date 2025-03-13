@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Creative Designer & Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#4F46E5',
+secondary: '#6366F1'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.project-card:hover .project-overlay { opacity: 1; }
+.project-card:hover img { transform: scale(1.05); }
+@keyframes typing {
+from { width: 0 }
+to { width: 90px }
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0px); }
+}
+.animate-float {
+animation: float 6s ease-in-out infinite;
+}
+#particles-js {
+pointer-events: none;
+}
+</style>
+</head>
+<body class="bg-white min-h-screen">
+<nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="logo.png" style="text-decoration: none ; width: 90px; height: auto; border: 0;"></a>
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary">Home</a>
+<a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
+<a href="#about" class="text-gray-700 hover:text-primary">About</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+</div>
+<button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+</nav>
+<div id="mobileMenu" class="hidden fixed inset-0 bg-white z-40 md:hidden">
+<div class="p-4 space-y-4">
+<a href="#home" class="block text-gray-700 hover:text-primary py-2">Home</a>
+<a href="#projects" class="block text-gray-700 hover:text-primary py-2">Projects</a>
+<a href="#about" class="block text-gray-700 hover:text-primary py-2">About</a>
+<a href="#contact" class="block text-gray-700 hover:text-primary py-2">Contact</a>
+</div>
+</div>
+<div id="particles-js" class="fixed inset-0 z-0"></div>
+<section id="home" class="pt-16 min-h-screen flex items-center relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/cb5183d4665d60d8a9b9ed669c4f741c.jpg'); opacity: 0.1;"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div data-aos="fade-right" data-aos-duration="1000">
+<h1 class="text-5xl font-bold mb-6">Hi, I'm Abdul Mutahar</h1>
+<p class="text-xl text-gray-600 mb-8">Creative Designer & Full Stack Developer crafting beautiful digital experiences</p>
+<div class="space-x-4">
+<a href="#projects" class="bg-primary text-white px-8 py-3 !rounded-button inline-block hover:bg-primary/90 transition-colors cursor-pointer">View Projects</a>
+<a href="#contact" class="border-2 border-primary text-primary px-8 py-3 !rounded-button inline-block hover:bg-primary/5 transition-colors cursor-pointer">Contact Me</a>
+</div>
+</div>
+<div class="relative" data-aos="fade-left" data-aos-duration="1000">
+<img src="profile_image.jpg" alt="Alexander Wright" class="rounded-full w-96 h-96 object-cover mx-auto shadow-xl animate-float" style="border: 1px solid black;">
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold text-center mb-4">Featured Projects</h2>
+<p class="text-gray-600 text-center mb-12">A selection of my recent work</p>
+<div class="flex flex-col items-center justify-center min-h-[400px] text-center">
+<div class="bg-primary/10 rounded-full p-8 mb-6">
+<i class="ri-rocket-line text-primary text-4xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Coming Soon</h3>
+<p class="text-gray-600 max-w-md">Exciting projects are currently under development. Stay tuned for amazing work that will be showcased here.</p>
+<div class="mt-8 flex items-center gap-2 text-primary">
+<span class="animate-pulse">●</span>
+<span>Projects launching in 2025</span>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div data-aos="fade-right" data-aos-duration="1000">
+<h2 class="text-4xl font-bold mb-6">About Me</h2>
+<p class="text-gray-600 mb-6">With over 2+ years of experience in digital design and development, I specialize in creating user-centered solutions that combine aesthetics with functionality. My approach focuses on clean, minimal design that delivers maximum impact. Tries to provide Quality work</p>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-32 font-medium">Design</div>
+<div class="flex-1 bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-32 font-medium">Development</div>
+<div class="flex-1 bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-32 font-medium">UI/UX</div>
+<div class="flex-1 bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+<a href="#" class="inline-block mt-8 px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Download Resume</a>
+</div>
+<div class="relative" data-aos="fade-left" data-aos-duration="1000">
+<img src="https://public.readdy.ai/ai/img_res/3317c623f818b8ba23e0e0566b068839.jpg" alt="Workspace" class="rounded-lg shadow-xl">
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold text-center mb-4">Get in Touch</h2>
+<p class="text-gray-600 text-center mb-12">Let's discuss your next project</p>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<form id="contactForm" class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Send Message</button>
+</form>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Email</div>
+<a href="mrmuthar786@gmail.com" class="text-gray-600 hover:text-primary">mrmuthar786@gmail.com</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Location</div>
+<div class="text-gray-600">Channo Shahabad, Dadu, Sindh, Pakistan</div>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Working Hours</div>
+<div class="text-gray-600">Mon - Fri, 9:00 - 18:00 PST</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Follow Me</h3>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-linkedin-line text-primary"></i>
+</a>
+<a href="https://github.com/abdulmutahar" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-github-line text-primary" ></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-dribbble-line text-primary"></i>
+</a>
+<a href="https://www.instagram.com/abdul_mutahar786?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-instagram-line text-primary"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block"><img src="logo.png" style="width: 150px;"></a>
+<p class="text-gray-400">Creating digital experiences that make a difference.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Newsletter</h4>
+<p class="text-gray-400 mb-4">Subscribe to receive updates and news.</p>
+<form id="newsletterForm" class="space-y-4">
+<input type="email" placeholder="Your email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+<button type="submit" class="w-full bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<div class="text-gray-400">© 2025 Abdul Mutahar. All rights reserved.</div>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+<i class="ri-arrow-up-line"></i>
+</button>
+<div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+<div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+<div class="text-center">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line text-3xl text-green-500"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Success!</h3>
+<p class="text-gray-600 mb-6">Your message has been sent successfully. I'll get back to you soon.</p>
+<button onclick="closeSuccessModal()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Close</button>
+</div>
+</div>
+</div>
+<div id="projectModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+<div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4">
+<div class="flex justify-between items-start mb-6">
+<h3 class="text-2xl font-bold" id="projectTitle"></h3>
+<button onclick="closeProjectModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div>
+<img id="projectImage" src="" alt="Project" class="w-full h-auto rounded-lg">
+</div>
+<div>
+<p id="projectDescription" class="text-gray-600 mb-6"></p>
+<div class="space-y-4">
+<div>
+<h4 class="font-bold mb-2">Technologies Used</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">HTML5</span>
+<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">CSS3</span>
+<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">JavaScript</span>
+<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">React</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-2">Project Duration</h4>
+<p class="text-gray-600">3 months</p>
+</div>
+<div>
+<h4 class="font-bold mb-2">Client</h4>
+<p class="text-gray-600">Fortune 500 Company</p>
+</div>
+</div>
+<div class="mt-8">
+<a href="#" class="bg-primary text-white px-6 py-2 !rounded-button inline-block hover:bg-primary/90 transition-colors">Visit Website</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function showProjectDetails(title, description, image) {
+const modal = document.getElementById('projectModal');
+const projectTitle = document.getElementById('projectTitle');
+const projectDescription = document.getElementById('projectDescription');
+const projectImage = document.getElementById('projectImage');
+projectTitle.textContent = title;
+projectDescription.textContent = description;
+projectImage.src = image;
+modal.classList.remove('hidden');
+}
+function closeProjectModal() {
+document.getElementById('projectModal').classList.add('hidden');
+}
+document.addEventListener('DOMContentLoaded', () => {
+AOS.init();
+particlesJS('particles-js', {
+particles: {
+number: { value: 80, density: { enable: true, value_area: 800 } },
+color: { value: '#4F46E5' },
+shape: { type: 'circle' },
+opacity: { value: 0.2, random: false },
+size: { value: 3, random: true },
+line_linked: { enable: true, distance: 150, color: '#4F46E5', opacity: 0.2, width: 1 },
+move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+},
+interactivity: {
+detect_on: 'canvas',
+events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+},
+retina_detect: true
+});
+});
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const backToTop = document.getElementById('backToTop');
+const contactForm = document.getElementById('contactForm');
+const newsletterForm = document.getElementById('newsletterForm');
+const successModal = document.getElementById('successModal');
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+backToTop.style.opacity = '1';
+} else {
+backToTop.style.opacity = '0';
+}
+});
+backToTop.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+const filterButtons = document.querySelectorAll('[data-filter]');
+filterButtons.forEach(button => {
+button.addEventListener('click', () => {
+filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-white'));
+button.classList.add('bg-primary', 'text-white');
+});
+});
+function showSuccessModal() {
+successModal.classList.remove('hidden');
+}
+function closeSuccessModal() {
+successModal.classList.add('hidden');
+}
+contactForm.addEventListener('submit', (e) => {
+e.preventDefault();
+showSuccessModal();
+contactForm.reset();
+});
+newsletterForm.addEventListener('submit', (e) => {
+e.preventDefault();
+showSuccessModal();
+newsletterForm.reset();
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth'
+});
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+</body>
+</html>
