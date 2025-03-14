@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Creative Designer & Developer</title>
+<title>Abdul Mutahar - Software Engineer & Web developer</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -13,8 +13,8 @@ tailwind.config = {
 theme: {
 extend: {
 colors: {
-primary: '#4F46E5',
-secondary: '#6366F1'
+primary: '#6366F1',
+secondary: '#818CF8'
 },
 borderRadius: {
 'none': '0px',
@@ -36,38 +36,18 @@ DEFAULT: '8px',
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-.project-card:hover .project-overlay { opacity: 1; }
-.project-card:hover img { transform: scale(1.05); }
-@keyframes typing {
-from { width: 0 }
-to { width: 90px }
-}
-@keyframes float {
-0% { transform: translateY(0px); }
-50% { transform: translateY(-20px); }
-100% { transform: translateY(0px); }
-}
-.animate-float {
-animation: float 6s ease-in-out infinite;
-}
-#particles-js {
-pointer-events: none;
-}
-</style>
+<link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-white min-h-screen">
-<nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<body class="bg-gray-900 min-h-screen text-gray-100">
+<nav class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <div class="flex justify-between h-16 items-center">
-<a href="#" class="text-2xl font-['Pacifico'] text-primary">
-    <img src="logo.png" style="text-decoration: none ; width: 90px; height: auto; border: 0;"></a>
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
 <div class="hidden md:flex space-x-8">
-<a href="#home" class="text-gray-700 hover:text-primary">Home</a>
-<a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
-<a href="#about" class="text-gray-700 hover:text-primary">About</a>
-<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+<a href="#home" class="text-gray-300 hover:text-primary">Home</a>
+<a href="#projects" class="text-gray-300 hover:text-primary">Projects</a>
+<a href="#about" class="text-gray-300 hover:text-primary">About</a>
+<a href="#contact" class="text-gray-300 hover:text-primary">Contact</a>
 </div>
 <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center">
 <i class="ri-menu-line text-xl"></i>
@@ -75,35 +55,36 @@ pointer-events: none;
 </div>
 </div>
 </nav>
-<div id="mobileMenu" class="hidden fixed inset-0 bg-white z-40 md:hidden">
+<div id="mobileMenu" class="hidden fixed inset-0 bg-gray-900 z-40 md:hidden">
 <div class="p-4 space-y-4">
-<a href="#home" class="block text-gray-700 hover:text-primary py-2">Home</a>
-<a href="#projects" class="block text-gray-700 hover:text-primary py-2">Projects</a>
-<a href="#about" class="block text-gray-700 hover:text-primary py-2">About</a>
-<a href="#contact" class="block text-gray-700 hover:text-primary py-2">Contact</a>
+<a href="#home" class="block text-gray-300 hover:text-primary py-2">Home</a>
+<a href="#projects" class="block text-gray-300 hover:text-primary py-2">Projects</a>
+<a href="#about" class="block text-gray-300 hover:text-primary py-2">About</a>
+<a href="#contact" class="block text-gray-300 hover:text-primary py-2">Contact</a>
 </div>
 </div>
-<div id="particles-js" class="fixed inset-0 z-0"></div>
+<div id="particles-js" class="absolute inset-0 z-0 h-screen pointer-events-none"></div>
+<div id="particles-footer" class="absolute inset-0 z-0 h-full pointer-events-none"></div>
 <section id="home" class="pt-16 min-h-screen flex items-center relative overflow-hidden">
 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/cb5183d4665d60d8a9b9ed669c4f741c.jpg'); opacity: 0.1;"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div data-aos="fade-right" data-aos-duration="1000">
-<h1 class="text-5xl font-bold mb-6">Hi, I'm Abdul Mutahar</h1>
-<p class="text-xl text-gray-600 mb-8">Creative Designer & Full Stack Developer crafting beautiful digital experiences</p>
-<div class="space-x-4">
+<div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+<div data-aos="fade-right" data-aos-duration="1000" class="animate-slideInLeft">
+<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Abdul Mutahar</h1>
+<p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">Software Engineer & UX Designer specializing in enterprise solutions and scalable architectures</p>
+<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
 <a href="#projects" class="bg-primary text-white px-8 py-3 !rounded-button inline-block hover:bg-primary/90 transition-colors cursor-pointer">View Projects</a>
 <a href="#contact" class="border-2 border-primary text-primary px-8 py-3 !rounded-button inline-block hover:bg-primary/5 transition-colors cursor-pointer">Contact Me</a>
 </div>
 </div>
 <div class="relative" data-aos="fade-left" data-aos-duration="1000">
-<img src="profile_image.jpg" alt="Alexander Wright" class="rounded-full w-96 h-96 object-cover mx-auto shadow-xl animate-float" style="border: 1px solid black;">
+<img src="profile_image.jpg" alt="Alexander Wright" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover mx-auto shadow-xl animate-float animate-pulse-slow">
 </div>
 </div>
 </div>
 </section>
-<section id="projects" class="py-20 bg-gray-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="projects" class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <h2 class="text-4xl font-bold text-center mb-4">Featured Projects</h2>
 <p class="text-gray-600 text-center mb-12">A selection of my recent work</p>
 <div class="flex flex-col items-center justify-center min-h-[400px] text-center">
@@ -120,32 +101,35 @@ pointer-events: none;
 </div>
 </section>
 <section id="about" class="py-20">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <div class="grid md:grid-cols-2 gap-12 items-center">
 <div data-aos="fade-right" data-aos-duration="1000">
 <h2 class="text-4xl font-bold mb-6">About Me</h2>
-<p class="text-gray-600 mb-6">With over 2+ years of experience in digital design and development, I specialize in creating user-centered solutions that combine aesthetics with functionality. My approach focuses on clean, minimal design that delivers maximum impact. Tries to provide Quality work</p>
-<div class="space-y-4">
-<div class="flex items-center">
-<div class="w-32 font-medium">Design</div>
-<div class="flex-1 bg-gray-200 rounded-full h-2">
-<div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+<p class="text-gray-600 mb-6">With over 2+ years of experience leading technical teams and architecting enterprise solutions, I specialize in developing scalable applications and implementing robust system architectures. My expertise spans cloud infrastructure, microservices architecture, and enterprise UX design, consistently delivering high-performance solutions.</p>
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-semibold mb-4">Core Competencies</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded">
+<div class="font-medium mb-2">System Architecture</div>
+<div class="text-sm text-gray-600">Frontend Website Developer</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<div class="font-medium mb-2">Technical Leadership</div>
+<div class="text-sm text-gray-600">Team Management, Project Planning, Agile Methodologies</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<div class="font-medium mb-2">Enterprise Development</div>
+<div class="text-sm text-gray-600">Java, Python, Node.js, React, Angular</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<div class="font-medium mb-2">UX Architecture</div>
+<div class="text-sm text-gray-600">Enterprise UX, Design Systems, Accessibility</div>
 </div>
 </div>
-<div class="flex items-center">
-<div class="w-32 font-medium">Development</div>
-<div class="flex-1 bg-gray-200 rounded-full h-2">
-<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
 </div>
 </div>
-<div class="flex items-center">
-<div class="w-32 font-medium">UI/UX</div>
-<div class="flex-1 bg-gray-200 rounded-full h-2">
-<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
-</div>
-</div>
-</div>
-<a href="#" class="inline-block mt-8 px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Download Resume</a>
+<a href="https://drive.google.com/file/d/1UGDhB-kM01PldsECcQa1ttKnYBqyWK36/view?usp=sharing" class="inline-block mt-8 px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Download Resume</a>
 </div>
 <div class="relative" data-aos="fade-left" data-aos-duration="1000">
 <img src="https://public.readdy.ai/ai/img_res/3317c623f818b8ba23e0e0566b068839.jpg" alt="Workspace" class="rounded-lg shadow-xl">
@@ -153,30 +137,30 @@ pointer-events: none;
 </div>
 </div>
 </section>
-<section id="contact" class="py-20 bg-gray-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="contact" class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <h2 class="text-4xl font-bold text-center mb-4">Get in Touch</h2>
 <p class="text-gray-600 text-center mb-12">Let's discuss your next project</p>
-<div class="grid md:grid-cols-2 gap-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
 <div>
 <form id="contactForm" class="space-y-6">
 <div>
-<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+<label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
 </div>
 <div>
-<label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
 <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
 </div>
 <div>
-<label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+<label class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+<input type="text" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
 </div>
 <div>
-<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-<textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required></textarea>
+<label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+<textarea rows="4" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" required></textarea>
 </div>
-<button type="submit" class="w-full bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Send Message</button>
+<button type="submit" class="w-full bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer animate-shake">Send Message</button>
 </form>
 </div>
 <div class="space-y-8">
@@ -189,7 +173,7 @@ pointer-events: none;
 </div>
 <div>
 <div class="font-medium">Email</div>
-<a href="mrmuthar786@gmail.com" class="text-gray-600 hover:text-primary">mrmuthar786@gmail.com</a>
+<a href="mailto:mrmuthar786@gmail.com" class="text-gray-600 hover:text-primary">mrmuthar786@gmail.com</a>
 </div>
 </div>
 <div class="flex items-center space-x-4">
@@ -198,7 +182,7 @@ pointer-events: none;
 </div>
 <div>
 <div class="font-medium">Location</div>
-<div class="text-gray-600">Channo Shahabad, Dadu, Sindh, Pakistan</div>
+<div class="text-gray-600">Dadu, Sindh, Pakistan</div>
 </div>
 </div>
 <div class="flex items-center space-x-4">
@@ -215,16 +199,16 @@ pointer-events: none;
 <div>
 <h3 class="text-xl font-bold mb-4">Follow Me</h3>
 <div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors animate-shake">
 <i class="ri-linkedin-line text-primary"></i>
 </a>
-<a href="https://github.com/abdulmutahar" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
-<i class="ri-github-line text-primary" ></i>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-github-line text-primary"></i>
 </a>
 <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
 <i class="ri-dribbble-line text-primary"></i>
 </a>
-<a href="https://www.instagram.com/abdul_mutahar786?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
 <i class="ri-instagram-line text-primary"></i>
 </a>
 </div>
@@ -233,12 +217,12 @@ pointer-events: none;
 </div>
 </div>
 </section>
-<footer class="bg-gray-900 text-white py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-4 gap-8">
+<footer class="bg-gray-950 text-white py-12 relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 <div>
-<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block"><img src="logo.png" style="width: 150px;"></a>
-<p class="text-gray-400">Creating digital experiences that make a difference.</p>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>
+<p class="text-gray-400">Delivering enterprise-grade solutions and architectural excellence.</p>
 </div>
 <div>
 <h4 class="text-lg font-bold mb-4">Quick Links</h4>
@@ -250,12 +234,12 @@ pointer-events: none;
 </ul>
 </div>
 <div>
-<h4 class="text-lg font-bold mb-4">Services</h4>
+<h4 class="text-lg font-bold mb-4">Expertise</h4>
 <ul class="space-y-2">
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Design</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Development</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">System Architecture</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Enterprise Solutions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Technical Leadership</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cloud Infrastructure</a></li>
 </ul>
 </div>
 <div>
@@ -267,8 +251,8 @@ pointer-events: none;
 </form>
 </div>
 </div>
-<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-<div class="text-gray-400">© 2025 Abdul Mutahar. All rights reserved.</div>
+<div class="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
+<div class="text-gray-400">© 2025 Abdul Mutahar | Junior Website Developer & UX Designer. All rights reserved.</div>
 <div class="flex space-x-4 mt-4 md:mt-0">
 <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
 <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
@@ -276,13 +260,13 @@ pointer-events: none;
 </div>
 </div>
 </footer>
-<button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+<button id="backToTop" class="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-primary text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer z-50">
 <i class="ri-arrow-up-line"></i>
 </button>
-<div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
-<div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
-<div class="text-center">
-<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50 p-2 sm:p-4">
+<div class="bg-gray-800 rounded-lg p-3 sm:p-4 md:p-6 lg:p-8 max-w-md w-full mx-2 sm:mx-4">
+<div class="text-center animate-fadeInUp">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-slow">
 <i class="ri-check-line text-3xl text-green-500"></i>
 </div>
 <h3 class="text-xl font-bold mb-2">Success!</h3>
@@ -291,8 +275,8 @@ pointer-events: none;
 </div>
 </div>
 </div>
-<div id="projectModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
-<div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4">
+<div id="projectModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50 p-2 sm:p-4">
+<div class="bg-gray-800 rounded-lg p-3 sm:p-4 md:p-6 lg:p-8 max-w-4xl w-full overflow-y-auto max-h-[95vh] sm:max-h-[90vh]">
 <div class="flex justify-between items-start mb-6">
 <h3 class="text-2xl font-bold" id="projectTitle"></h3>
 <button onclick="closeProjectModal()" class="text-gray-400 hover:text-gray-600">
@@ -309,10 +293,10 @@ pointer-events: none;
 <div>
 <h4 class="font-bold mb-2">Technologies Used</h4>
 <div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">HTML5</span>
-<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">CSS3</span>
-<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">JavaScript</span>
-<span class="px-3 py-1 bg-gray-100 rounded-full text-sm">React</span>
+<span class="px-3 py-1 bg-gray-700 rounded-full text-sm">HTML5</span>
+<span class="px-3 py-1 bg-gray-700 rounded-full text-sm">CSS3</span>
+<span class="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
+<span class="px-3 py-1 bg-gray-700 rounded-full text-sm">React</span>
 </div>
 </div>
 <div>
@@ -331,94 +315,6 @@ pointer-events: none;
 </div>
 </div>
 </div>
-<script>
-function showProjectDetails(title, description, image) {
-const modal = document.getElementById('projectModal');
-const projectTitle = document.getElementById('projectTitle');
-const projectDescription = document.getElementById('projectDescription');
-const projectImage = document.getElementById('projectImage');
-projectTitle.textContent = title;
-projectDescription.textContent = description;
-projectImage.src = image;
-modal.classList.remove('hidden');
-}
-function closeProjectModal() {
-document.getElementById('projectModal').classList.add('hidden');
-}
-document.addEventListener('DOMContentLoaded', () => {
-AOS.init();
-particlesJS('particles-js', {
-particles: {
-number: { value: 80, density: { enable: true, value_area: 800 } },
-color: { value: '#4F46E5' },
-shape: { type: 'circle' },
-opacity: { value: 0.2, random: false },
-size: { value: 3, random: true },
-line_linked: { enable: true, distance: 150, color: '#4F46E5', opacity: 0.2, width: 1 },
-move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
-},
-interactivity: {
-detect_on: 'canvas',
-events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
-},
-retina_detect: true
-});
-});
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const backToTop = document.getElementById('backToTop');
-const contactForm = document.getElementById('contactForm');
-const newsletterForm = document.getElementById('newsletterForm');
-const successModal = document.getElementById('successModal');
-menuBtn.addEventListener('click', () => {
-mobileMenu.classList.toggle('hidden');
-});
-window.addEventListener('scroll', () => {
-if (window.pageYOffset > 300) {
-backToTop.style.opacity = '1';
-} else {
-backToTop.style.opacity = '0';
-}
-});
-backToTop.addEventListener('click', () => {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-const filterButtons = document.querySelectorAll('[data-filter]');
-filterButtons.forEach(button => {
-button.addEventListener('click', () => {
-filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-white'));
-button.classList.add('bg-primary', 'text-white');
-});
-});
-function showSuccessModal() {
-successModal.classList.remove('hidden');
-}
-function closeSuccessModal() {
-successModal.classList.add('hidden');
-}
-contactForm.addEventListener('submit', (e) => {
-e.preventDefault();
-showSuccessModal();
-contactForm.reset();
-});
-newsletterForm.addEventListener('submit', (e) => {
-e.preventDefault();
-showSuccessModal();
-newsletterForm.reset();
-});
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-e.preventDefault();
-const target = document.querySelector(this.getAttribute('href'));
-if (target) {
-target.scrollIntoView({
-behavior: 'smooth'
-});
-mobileMenu.classList.add('hidden');
-}
-});
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
